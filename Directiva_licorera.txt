@@ -1,0 +1,24 @@
+
+**********VISTAS ******************
+ESTIO.CSS
+1. Login
+2.productos
+3.compras	
+3.venya index
+
+************************
+
+****** FUNCIOJNES ************
+1.buscarProducto
+
+********* VOMPRAS Y VENTAS JS ********
+1.tablaTemporalventa
+2.detalleVenta
+
+*********** BD ***********
+1.tbl_venta_producto
+
+
+**modelo ventas*******
+Insert de venta_producto
+reporteVentas

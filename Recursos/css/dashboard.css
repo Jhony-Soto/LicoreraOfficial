@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		
+}
+hr{
+	border-top: 1px solid rgba(255,255,255,.15);
+	margin:0 5%;
+}
+a{
+	text-decoration: none;
+}
+
+.btn-menu{
+	display: block;
+	background:#333448;
+	padding:20px;
+	font-size:18px;
+	display: none;
+}
+.activo{
+	display: block;
+}
+.right{
+	float:right;
+}
+.submenu{
+	display:none;
+}
+.contenedor-menu{
+	width:20%;
+	background:#4e73df;
+	display: inline-block;
+}
+.contenedor-menu .logo-user{
+	width:100%;
+}
+
+.contenedor-menu .logo-user img{
+	width:90%;
+	margin:5%;
+}
+
+.contenedor-menu .menu{
+	width:100%;
+}
+.contenedor-menu ul li {
+	list-style: none;
+	padding:18px 15px;
+	color: #D5D3D3;
+	font-size:15px;
+}
+.contenedor-menu ul li a{
+	list-style: none;
+	padding:18px 15px;
+	color: #D5D3D3;
+	font-size:15px;
+	text-decoration: none;
+}
+.contenedor-menu ul li a:hover{
+	cursor: pointer;
+	color: white;
+}
+.contenedor-menu ul li:hover{
+	cursor: pointer;
+	color: white;
+}
+.submenu{
+	background:white;
+	border-radius:10px;
+}
+
+.submenu li{
+	text-align: center;
+	align-items:center;
+	margin:0 5%;
+}
+.contenedor-menu ul li .submenu li a {
+	text-decoration: none;
+	color: #000;
+	font-size:15px;
+}
+.submenu li a:hover {
+	font-weight: bold;
+}
+.submenu li:hover {
+	background:#D6D7D9;
+	border-radius:10px;
+	color: #524F4F;
+}
+.iconos{
+	font-size:25px;
+	margin-right:5%;
+}
+
+.wrapper{
+	display:flex;
+	font-size:10px;
+}
+
+/******* nav-contenido*/
+.nav-content{
+	width:100vw;
+	height:100vh;
+
+}
+.nav-content .navbar{
+	position: relative;
+    display: flex;
+    flex-wrap: wrap;
+   	
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+  
+}
+.nav-content .navbar ul{
+	/*position: absolute;	*/
+	align-items:center;
+	display:flex;
+	list-style:none;
+	/*margin-left:0px;*/
+}
+.nav-content .navbar .user{
+	background:red;
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	float:right;
+}
+.nav-content .navbar .user img{
+	width: 90%;
+	height:90%;
+}
+.nav-content .navbar .nombre-user{
+	float:left;
+}
+
+/*media query*/
+
+@media screen and (max-width: 450px){
+	.contenedor-menu{
+		width:100%;
+		margin:0px;
+		position: fixed;
+		top:0px;
+		z-index:1000;
+	}
+
+
+	.contenedor-menu .logo-user{
+		width:35%;
+		margin-left:30%;
+	}
+
+	.contenedor-menu .logo-user img{
+		width:90%;
+		margin:5%;
+	}
+
+	.btn-menu{
+		display:block;
+	}
+
+	.contenedor-menu .menu{
+		display: none;
+	}
+
+}
