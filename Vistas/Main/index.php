@@ -1,47 +1,98 @@
 <?php require_once 'Vistas/Encabezado.php' ?>
  
-<section class="section-main">
-    <div class="title"> 
-        <h1>Estanquillo 4 Esquinas</h1>
-        <p>Disfruta del mejor licor con  toda la seguridad.<br>Porque estas tomando licor de la mejor calidad.</p>
-    </div>
-    <img src="<?= URL ?>Recursos/img/licor.jpg">
 
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="<?php URL ?>Recursos/img/corona1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php URL ?>Recursos/img/slider2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php URL ?>Recursos/img/aguardiente1.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php URL ?>Recursos/img/Jose1.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php URL ?>Recursos/img/pilsen1.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php URL ?>Recursos/img/vodka.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<section class="row my-5" id="contenidoLoad">
+    <div class="col-md-2">
+        <ul class="list-group" >
+          <div class="btn-group-vertical" id="listCategoria">
+          </div>
+        </ul>
+    </div>
+
+    <div class="col-md-10">
+        <section > 
+            <div class="container my-5">
+                <div class="row" id="contenido-productos"> </div>  
+            </div>
+        </section> 
+
+    </div>
 </section>
 
-<section class="slider">
-    <div class="slider-titulo">
-        <span class="icon-star"></span>
-        <span class="icon-star"></span>
-        <span class="icon-star"></span>
-        <h2>Algunas de nuestras marcas.</h2>
-        <span class="icon-star"></span>
-        <span class="icon-star"></span>
-        <span class="icon-star"></span>
-    </div>
-    <ul>
-        <li><img src="<?= URL ?>Recursos/img/caldas.png"></li>
-        <li><img src="<?= URL ?>Recursos/img/guarocon.png"></li>
-        <li><img src="<?= URL ?>Recursos/img/guaroSin.png"></li>
-        <li><img src="<?= URL ?>Recursos/img/jose.png"></li>
-        <li><img src="<?= URL ?>Recursos/img/olpark.png"></li>
-        <li><img src="<?= URL ?>Recursos/img/ron.png"></li>
-        <li><img src="<?= URL ?>Recursos/img/ron8.png"></li>
-    </ul>
-</section>
 
-<section>
-    <div class="container my-5">
-        <div class="row" id="contenido-productos">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">¡Cuidate y Cuidemonos Juntos!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Somos <strong> licorera 4 esquinas</strong>, estamos ubicados en el municipio de <strong>Rionegro</strong> en el barrio 4 esquinas al lado del cai.<br>
+            Ofrecemos gran variedad de <strong>licores, cervecería y demás </strong>
+            con la mejor calidad y lo mejor a <strong>precios muy bajos.</strong> <br>  
+        </p>
+      </div>
+      <div class="modal-footer text-center">
+        <strong>
+            Acércate y danos el gusto de atenderte .
+            </strong>
+      </div>
+    </div>
+  </div>
+</div>
+
             
-        </div>  
-    </div>
-</section>      
 
 <?php 	require 'Vistas/Footer.php'; ?>
   
 
 <script type="text/javascript">
+  $('#exampleModalLong').modal('show')
 	$(document).ready(function(){
 		todosProductos('<?= URL ?>');
         nuevaVisita('<?= URL ?>');

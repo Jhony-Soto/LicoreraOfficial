@@ -11,9 +11,8 @@
 
 
 		function todosProductos(){
-			$sql=mysqli_query($this->connec,"SELECT pro.codigo,pro.producto,pro.cantidad,pro.Valor_unidad,										pro.Valor_venta,ca.nombre,pro.Descripcion,pro.imagen
-												FROM `tbl_productos` as pro INNER join tbl_categoria as ca
-														on pro.cod_categoria=ca.codigo");
+			$sql=mysqli_query($this->connec,"SELECT pro.codigo,pro.producto,pro.cantidad,pro.Valor_unidad,pro.Valor_venta,pro.cod_categoria,ca.nombre,pro.Descripcion,pro.imagen FROM `tbl_productos` as pro INNER join tbl_categoria as ca on pro.cod_categoria=ca.codigo
+			");
 			$sql=mysqli_fetch_all($sql,MYSQLI_ASSOC);
 			if ($sql){
 				return $sql;
@@ -91,12 +90,7 @@
 		}
 
 		function selectProductoLike($dato){
-			$sql=mysqli_query($this->connec,"SELECT pro.codigo,pro.producto,pro.cantidad,pro.Valor_unidad,														pro.Valor_venta,ca.nombre,pro.Descripcion,pro.imagen
-
-											FROM `tbl_productos` as pro INNER join tbl_categoria as ca
-														on pro.cod_categoria=ca.codigo 
-														
-											 where pro.codigo like '%$dato%' or pro.producto like '%$dato%'");
+			$sql=mysqli_query($this->connec,"SELECT pro.codigo,pro.producto,pro.cantidad,pro.Valor_unidad,pro.Valor_venta,pro.cod_categoria,ca.nombre,pro.Descripcion,pro.imagen FROM `tbl_productos` as pro INNER join tbl_categoria as ca on pro.cod_categoria=ca.codigo where pro.producto like '%$dato%' or ca.nombre like '%$dato%' or pro.Descripcion like '%$dato%'");
 			$sql=mysqli_fetch_all($sql,MYSQLI_ASSOC);
 			if ($sql){
 				return $sql;

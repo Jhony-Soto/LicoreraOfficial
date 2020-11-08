@@ -87,10 +87,12 @@
     ?>
 
   <!-- ********  MENU DEL CATALOGO******-->
-    <header id="nav" class="bg-dark">
+    <header id="nav">
             <section class="nav" id="nav">
                 <div class="logo">
-                    <img src="<?= URL ?>Recursos/img/logo2.png" alt="">
+                    <a href="<?= URL ?>">
+                        <img src="<?= URL ?>Recursos/img/logo2.png" alt="">
+                    </a>
                 </div>
 
                 <div class="form-buscador">
